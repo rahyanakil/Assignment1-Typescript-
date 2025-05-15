@@ -103,5 +103,7 @@ function getDayType(day:Day):string{
   return "Weekday"
 }
 
+//problem 08
+
   //Assignment end
 }
