@@ -1,12 +1,11 @@
 {
-  // Assignment start
+ 
   function formatString(input: string, toUpper?: boolean): string {
     if (toUpper === false) {
       return input.toLowerCase();
     }
     return input.toUpperCase();
   }
-  //problem 2
 
   const books =[
   {
@@ -27,11 +26,11 @@ function filterByRating (items:{title:string;rating:number
   return filteredBooks;
 
 }
-//problem -03
+
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   return arrays.reduce((acc, curr) => acc.concat(curr), []);
 }
-//problem 04
+
 class Vehicle{
   private make:string;
   private year:number;
@@ -56,8 +55,6 @@ class Car extends Vehicle{
   }
 }
 
-
-//problem 04
  function processValue(value:string|number):number{
    if (typeof value === "string" ){
     return value.length;
@@ -68,7 +65,7 @@ class Car extends Vehicle{
    return 0;
    
  }
-//  problem 06
+
 interface Product {
   name:string;
   price:number;
@@ -86,7 +83,7 @@ function getMostExpensiveProduct (products:Product[]):Product|null{
     return (currentProduct.price>maxProduct.price)?currentProduct:maxProduct
   })
 }
-// problem 07
+
 enum Day{
   Monday,
   Tuesday,
@@ -103,7 +100,13 @@ function getDayType(day:Day):string{
   return "Weekday"
 }
 
-//problem 08
 
-  //Assignment end
+async function squareAsync(n:number):Promise<number>{
+  if (n<0){
+    throw new Error("Negative Number");
+  }
+  await new Promise(resolve=>setTimeout(resolve,1000));
+  return n*n;
+}
+
 }
